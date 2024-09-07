@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 import Logo1 from "@public/assets/icons/logo.svg";
 import Logo2 from "@public/assets/icons/logo-icon.svg";
 
-export function Header({ children }: HeaderProps) {
+export function Header({ children, className }: HeaderProps) {
   return (
-    <div className="header">
+    <div className={cn("header", className)}>
       <Link href="/" className="md:flex-1">
         <Image
           src={Logo1}
