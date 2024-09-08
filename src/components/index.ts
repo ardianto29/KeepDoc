@@ -1,5 +1,6 @@
 //ui
 export * from "./ui/button";
+export * from "./ui/input";
 
 //main
 export * from "./main/Header";
