@@ -3,7 +3,13 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { ClientSideSuspense, RoomProvider } from "@liveblocks/react/suspense";
-import { Header, Editor, ActiveCollaborators, Input } from "@/components";
+import {
+  Header,
+  Editor,
+  ActiveCollaborators,
+  Input,
+  Loader,
+} from "@/components";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 import icon3 from "@public/assets/icons/edit.svg";
@@ -70,7 +76,7 @@ export function CollaborativeRoom({
 
   return (
     <RoomProvider id={roomId}>
-      <ClientSideSuspense fallback={<div>Loading…</div>}>
+      <ClientSideSuspense fallback={<Loader />}>
         <div className="collaborative-room">
           <Header>
             <div
