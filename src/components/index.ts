@@ -2,7 +2,7 @@
 export * from "./ui/button";
 export * from "./ui/input";
 export * from "./ui/dialog";
-// export * from "./ui/label";
+export * from "./ui/label";
 
 //main
 export * from "./main/Header";
