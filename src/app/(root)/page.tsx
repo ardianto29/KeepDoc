@@ -1,4 +1,10 @@
-import { AddDocumentBtn, Button, DeleteModal, Header } from "@/components";
+import {
+  AddDocumentBtn,
+  Button,
+  DeleteModal,
+  Header,
+  Notifications,
+} from "@/components";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
@@ -23,7 +29,7 @@ export default async function Home() {
     <main className="home-container">
       <Header className="sticky left-0 top-0">
         <div className="flex items-center gap-2 lg:gap-4">
-          Notification
+          <Notifications />
           <SignedIn>
             <UserButton />
           </SignedIn>
