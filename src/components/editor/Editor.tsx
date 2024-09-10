@@ -17,7 +17,7 @@ import {
   useEditorStatus,
 } from "@liveblocks/react-lexical";
 import React from "react";
-import { Loader, Comments } from "@/components";
+import { Loader, Comments, DeleteModal } from "@/components";
 import FloatingToolbarPlugin from "./plugins/FloatingToolbarPlugin";
 import { useThreads } from "@liveblocks/react/suspense";
 
@@ -55,7 +55,7 @@ export function Editor({
       <div className="editor-container size-full">
         <div className="toolbar-wrapper flex min-w-full justify-between">
           <ToolbarPlugin />
-          {/* {currentUserType === "editor" && <DeleteModal roomId={roomId} />} */}
+          {currentUserType === "editor" && <DeleteModal roomId={roomId} />}
         </div>
 
         <div className="editor-wrapper flex flex-col items-center justify-start">

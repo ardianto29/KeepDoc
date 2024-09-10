@@ -1,4 +1,4 @@
-import { AddDocumentBtn, Button, Header } from "@/components";
+import { AddDocumentBtn, Button, DeleteModal, Header } from "@/components";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
@@ -55,7 +55,7 @@ export default async function Home() {
                     </p>
                   </div>
                 </Link>
-                {/*TODO: Add delete button*/}
+                <DeleteModal roomId={id} />
               </li>
             ))}
           </ul>
