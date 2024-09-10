@@ -15,6 +15,7 @@ export * from "./main/Comments";
 export * from "./main/ShareModal";
 export * from "./main/UserTypeSelector";
 export * from "./main/Collaborator";
+export * from "./main/DeleteModal";
 
 //editor
 export * from "./editor/Editor";
